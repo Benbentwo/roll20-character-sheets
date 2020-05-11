@@ -72,9 +72,9 @@
                     <span class="solidblack">Affinity</span>
                 </div>
                 <div class="effectrangebox">
-                    <input type="number" class="info-box" style="width: 100%" name="attr_effectrange" />
+                    <input type="number" class="info-box" style="width: 100%" name="attr_evasionactioncost" />
                     <br>
-                    <span class="solidblack">Effect Range</span>
+                    <span class="solidblack">Evasion Action Cost</span>
                 </div>
             </div>
         </div>
@@ -102,14 +102,14 @@
             <div class="dexgrid">
                 <div class="dexgridlabel">
                     <div class="label">
-                        <span class="whiteout">Dex</span>
+                        <span class="whiteout">Agi</span>
                     </div>
                 </div>
                 <div class="dexscore">
-                    <input type="number" class="info-box" style="width: 100%" name="attr_dex_score" />
+                    <input type="number" class="info-box" style="width: 100%" name="attr_agi_score" />
                 </div>
                 <div class="dextemp">
-                    <input type="number" class="info-box" style="width: 100%" name="attr_dex_temp" />
+                    <input type="number" class="info-box" style="width: 100%" name="attr_agi_temp" />
                 </div>
             </div>
         </div>
@@ -147,14 +147,29 @@
             <div class="magicgrid">
                 <div class="magicgridlabel">
                     <div class="label">
-                        <span class="whiteout">Magic</span>
+                        <span class="whiteout">Mana</span>
                     </div>
                 </div>
                 <div class="magicscore">
-                    <input type="number" class="info-box" style="width: 100%" name="attr_magic_score" />
+                    <input type="number" class="info-box" style="width: 100%" name="attr_mana_score" />
                 </div>
                 <div class="magictemp">
-                    <input type="number" class="info-box" style="width: 100%" name="attr_magic_temp" />
+                    <input type="number" class="info-box" style="width: 100%" name="attr_mana_temp" />
+                </div>
+            </div>
+        </div>
+        <div class="vitbox">
+            <div class="vitgrid">
+                <div class="vitgridlabel">
+                    <div class="label">
+                        <span class="whiteout">Vit</span>
+                    </div>
+                </div>
+                <div class="vitscore">
+                    <input type="number" class="info-box" style="width: 100%" name="attr_vit_score" />
+                </div>
+                <div class="vittemp">
+                    <input type="number" class="info-box" style="width: 100%" name="attr_vit_temp" />
                 </div>
             </div>
         </div>
@@ -223,6 +238,16 @@
                 </div>
             </div>
         </div>
+        <div class="exp7box">
+            <div class="exp7grid">
+                <div class="exp7">
+                    <input type="text" class="info-box" style="width: 100%" name="attr_exp7" />
+                </div>
+                <div class="exp7a">
+                    <input type="number" class="info-box" style="width: 100%" name="attr_exp7a" />
+                </div>
+            </div>
+        </div>
         <div class="itemslotnamebox">
             <div class="label">
                 <span class="whiteout">Item Slots</span>
@@ -248,9 +273,14 @@
                 <input type="text" class="info-box" style="width: 100%" name="attr_item_slot_4" />
             </div>
         </div>
+        <div class="itemslot5">
+            <div class="label">
+                <input type="text" class="info-box" style="width: 100%" name="attr_item_slot_5" placeholder="Soldier Only"/>
+            </div>
+        </div>
         <div class="specialabilitynamebox">
             <div class="label">
-                <span class="whiteout">Special Ability</span>
+                <span class="whiteout">Inventory</span>
             </div>
         </div>
         <div class="sa1">
@@ -286,6 +316,11 @@
         <div class="sa7">
             <div class="label">
                 <input type="text" class="info-box" style="width: 100%" name="attr_special_ability_7" />
+            </div>
+        </div>
+        <div class="sa8">
+            <div class="label">
+                <input type="text" class="info-box" style="width: 100%" name="attr_special_ability_8" />
             </div>
         </div>
         <div class="weaponbox1">
@@ -440,7 +475,7 @@
         </div>
         <div class="inventorynamebox">
             <div class="label">
-                <span class="whiteout">Inventory</span>
+                <span class="whiteout">Miscellaneous</span>
             </div>
         </div>
         <div class="inventory1">
