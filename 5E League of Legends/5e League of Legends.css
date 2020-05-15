@@ -2813,7 +2813,7 @@
     grid-area: health;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    grid-template-areas: "hp-max hp hp health wounds wounds" "hit-dice hit-dice death health wounds wounds";
+    grid-template-areas: "hp-max hp hp death death " "hit-dice hit-dice boots death death";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 65px auto;
 }
@@ -2881,7 +2881,13 @@
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-death {
     grid-area: death;
-    max-height: 65px;
+    /*max-height: 65px;*/
+    align-items: center;
+    color: #dddddd;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-health .sheet-pc-death .sheet-container-body {
