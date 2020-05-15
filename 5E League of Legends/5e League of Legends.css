@@ -2334,7 +2334,7 @@
     display: grid;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    grid-template-areas: "attributes trackers trackers" "attributes health health" "attributes attacks effects";
+    grid-template-areas: "attributes trackers trackers" "attributes health health" "attributes attacks attacks";
     grid-template-columns: 265px 1fr 1fr;
     grid-template-rows: 85px auto 1fr;
 }
@@ -2344,7 +2344,7 @@
     display: grid;
     grid-template-columns: 75px auto;
     grid-template-rows: 30px auto auto auto 1fr;
-    grid-template-areas: "attributes proficiency-bonus" "attributes saves" "attributes skills" "tools tools" "proficiencies proficiencies";
+    grid-template-areas: "attributes proficiency-bonus" "attributes saves" "attributes skills" "attributes skills" "tools tools" "proficiencies proficiencies";
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
