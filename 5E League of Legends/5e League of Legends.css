@@ -3153,9 +3153,9 @@
     grid-area: attacks;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    grid-template-areas: "spell-dc spell-burnout resources" "attacks attacks attacks""attacks attacks attacks""attacks attacks attacks""attacks attacks attacks""attacks attacks attacks";
+    grid-template-areas: "spell-ability spell-dc spell-attack" "resource-class resource-other spell-burnout" "resources resources resources" "attacks attacks attacks";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: 65px 65px auto 1fr;
 }
 
 .charsheet .sheet-darkerdungeons .sheet-section-pc .sheet-tab-core .sheet-container-well-attacks .sheet-pc-spell-ability {
