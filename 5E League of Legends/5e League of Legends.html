@@ -498,12 +498,16 @@
 							<div class="sheet-container-well sheet-container-well-attacks">
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
+										<button disabled type="roll" name="roll_hit_dice" value="@{wtype}&{template:simple} {{rname=Hit Dice}} {{mod=D@{hitdie_final}+[[@{constitution_mod}[CON]]]}} {{r1=[[1d@{hitdie_final}+[[@{constitution_mod}]][CON]]]}} {{normal=1}} @{charname_output}">Mana</button>
 									</div>
 									<div class="sheet-container-body">
-										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
+										<input type="text" name="attr_mana" title="@{mana}">
+										<span>/</span>
+										<input type="text" name="attr_mana_max" title="@{mana_max}">
 									</div>
 								</div>
+
+						<!--
 								<div class="sheet-container-box sheet-pc-spell-attack">
 									<div class="sheet-container-header">Spell Attack Bonus</div>
 									<div class="sheet-container-body">
@@ -532,18 +536,20 @@
 										<input type="text" name="attr_other_resource_max" title="@{other_resource_max}">
 									</div>
 								</div>
+						-->
 								<div class="sheet-container-box sheet-pc-burnout">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Spell Burnout}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}">Spell Burnout</button>
+										<span>Allowed every other Turn</span>
+										<button type="roll" name="roll_mp_regen" value="@{wtype}&{template:simple} {{rname=Regenerate Mana}} {{mod=@{mp_regen}}} {{r1=[[@{mp_regen}]]}} {{normal=1}} @{charname_output}">Regenerate Mana</button>
 									</div>
 									<div class="sheet-container-body">
-										<select name="attr_spell_burnout" title="@{spell_burnout}">
-											<option value=""></option>
-											<option value="d12">d12</option>
-											<option value="d10">d10</option>
-											<option value="d8">d8</option>
-											<option value="d6">d6</option>
-											<option value="d4">d4</option>
+										<select name="attr_mp_regen" title="@{mp_regen}">
+											<option value="1d1"></option>
+											<option value="1d4">1d4</option>
+											<option value="1d6">1d6</option>
+											<option value="1d8">1d8</option>
+											<option value="1d10">1d10</option>
+											<option value="1d12">1d12</option>
 										</select>
 									</div>
 								</div>
@@ -1733,10 +1739,16 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-dc">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Saving Throw Attack}} {{mod=@{spell_save_dc}}} {{r1=[[@{d20}+[[@{spell_save_dc}]]]]}} {{normal=1}} @{charname_output}">Spell Save DC</button>
+										<button disabled type="roll" name="roll_hit_dice" value="@{wtype}&{template:simple} {{rname=Hit Dice}} {{mod=D@{hitdie_final}+[[@{constitution_mod}[CON]]]}} {{r1=[[1d@{hitdie_final}+[[@{constitution_mod}]][CON]]]}} {{normal=1}} @{charname_output}">Mana</button>
 									</div>
 									<div class="sheet-container-body">
-										<span name="attr_spell_save_dc" title="@{spell_save_dc}"></span>
+										<input type="text" name="attr_mana" title="@{mana}">
+										<span>/</span>
+										<input type="text" name="attr_mana_max" title="@{mana_max}">
+									</div>
+										<div class="sheet-container-footer">
+											<span>Remaining</span>
+											<span>Maximum</span>
 									</div>
 								</div>
 								<div class="sheet-container-box sheet-pc-spell-attack">
@@ -1769,16 +1781,16 @@
 								</div>
 								<div class="sheet-container-box sheet-pc-burnout">
 									<div class="sheet-container-header">
-										<button type="roll" name="roll_burnout" value="@{wtype}&{template:simple} {{rname=Spell Burnout}} {{mod=@{spell_burnout}}} {{r1=[[@{spell_burnout}]]}} {{normal=1}} @{charname_output}">Spell Burnout</button>
+										<button type="roll" name="roll_mp_regen" value="@{wtype}&{template:simple} {{rname=Regenerate Mana}} {{mod=@{mp_regen}}} {{r1=[[@{mana_regen}]]}} {{normal=1}} @{charname_output}">Regenerate Mana</button>
 									</div>
 									<div class="sheet-container-body">
-										<select name="attr_spell_burnout" title="@{spell_burnout}">
+										<select name="attr" title="@{spell_burnout}">
 											<option value=""></option>
-											<option value="d12">d12</option>
-											<option value="d10">d10</option>
-											<option value="d8">d8</option>
-											<option value="d6">d6</option>
 											<option value="d4">d4</option>
+											<option value="d6">d6</option>
+											<option value="d8">d8</option>
+											<option value="d10">d10</option>
+											<option value="d12">d12</option>
 										</select>
 									</div>
 								</div>
